@@ -1,0 +1,16 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html{
+  direction: rtl;
+  
+}
+body{
+  background-color: #cb0d0d;
+}
+
+li{
+  color: #331919;
+}

@@ -1,0 +1,45 @@
+.work-card {
+  overflow: hidden;
+  transition: box-shadow 0.3s;
+  cursor: pointer;
+  position: relative;
+}
+.work-card:hover {
+  box-shadow: 0 0 24px #ffc10799;
+}
+.work-info-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(44, 44, 44, 0.92);
+  color: #fff;
+  padding: 16px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  border-radius: 0 0 18px 18px;
+  font-size: 1rem;
+  text-align: center;
+}
+.work-card:hover .work-info-overlay {
+  opacity: 1;
+}
+.work-modal {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(20,20,30,0.95);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.work-modal-content {
+  background: none;
+  padding: 0;
+  text-align: center;
+}
+#works{
+  background: #fff;
+  max-width: 100%;
+  width: 100%;
+}
