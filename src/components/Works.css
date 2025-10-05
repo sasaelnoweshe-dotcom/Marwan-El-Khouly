@@ -40,6 +40,20 @@
 }
 #works{
   background: #fff;
-  max-width: 100%;
+  padding: 10rem;
+  max-width: 100% ;
   width: 100%;
+}
+
+@media (max-width: 768px) {
+  .work-card {
+    margin-bottom: 1.5rem;
+  }
+  .work-info-overlay {
+    font-size: 0.9rem;
+    padding: 12px;
+  }
+  #works{
+    padding: 2rem;
+  }
 }
