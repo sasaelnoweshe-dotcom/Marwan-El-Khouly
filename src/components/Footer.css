@@ -1,11 +1,10 @@
 .footer {
   background: #23243a;
-  color: #ffd700;
+  width: 100%;
   padding: 2em 0 1em 0;
   text-align: center;
-  margin-top: 2em;
   border-top: 2px solid #ffd700;
-  font-family: 'Cairo', Arial, Helvetica, sans-serif;
+  font-family: "Cairo", Arial, Helvetica, sans-serif;
 }
 
 .footer-nav {
@@ -17,7 +16,7 @@
 }
 
 .footer-nav a {
-  color: #ffd700;
+  color: #0066ff;
   font-weight: bold;
   text-decoration: none;
   font-size: 1.1em;
@@ -32,43 +31,25 @@
 .footer-copy {
   margin-bottom: 1em;
   color: #f5f5f5;
-  font-size: 0.95em;
+  font-size: 0.8em;
 }
 
-.footer-social {
-  color: #ffd700;
-  font-size: 1.1em;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 0.7em;
-}
-
-.footer-social a {
-  margin: 0 0.2em;
-  color: #ffd700;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.2s;
-}
-
-.footer-social a:hover {
-  color: #fff;
-  text-shadow: 0 2px 8px #ffd70099;
-}
 
 @media (max-width: 600px) {
   .footer {
     padding: 1em 0 0.5em 0;
-    font-size: 0.97em;
+    font-size: 0.7em;
   }
   .footer-nav {
-    gap: 0.5em;
+    gap: 1em;
+    align-items: center;
   }
-  .footer-social {
-    gap: 0.3em;
+  .footer-nav a {
     font-size: 1em;
-    flex-direction: column;
+    padding: 0.3em 0;
+  }
+  .footer-copy {
+    font-size: 0.9em;
+    margin-bottom: 0.7em;
   }
 }
