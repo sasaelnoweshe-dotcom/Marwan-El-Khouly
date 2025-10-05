@@ -1,169 +1,111 @@
-.bounce-in {
-  animation: bounceIn 1.2s cubic-bezier(.68,-0.55,.27,1.55) both;
-  display: inline-block;
-}
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
 
-.star-animate {
-  display: inline-block;
-  animation: starFlash 1.2s 1.2s infinite alternate;
-}
 
-.hero {
-  position: relative;
-  min-height: 90vh; /* يغطي الشاشة بالكامل */
+#root {
   width: 100%;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.hero::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.4); /* تراكب داكن على الفيديو */
-  z-index: 1;
-  pointer-events: none;
-}
-
-.hero-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 0;
-  pointer-events: none;
-}
-
-.hero-overlay {
-  position: relative;
-  z-index: 2;
-  min-height: 60vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  max-width: 100%; /* غيّرها من 1280px إلى 100vw */
+  margin: 0;
   text-align: center;
-  padding: 32px 16px 24px 16px;
-  gap: 18px;
+  font-family: 'Cairo', Arial, Helvetica, sans-serif !important;
+  background: linear-gradient(120deg, #23243a 0%, #2d2e4a 100%);
+  min-height: 100vh;
+  color: #f5f5f5;
 }
 
-.hero-overlay h1 {
-  border: none;
-  padding: 50px 40px;
-  border-radius: 20px;
-  color: #fff;
-  font-size: 2.5rem;
-  animation: fadeIn 2s ease-in-out;
-  font-weight: bold;
-  background: linear-gradient(120deg, #23243a 60%, #2196f3 120%);
-  backdrop-filter: blur(8px);
-  box-shadow: 0 8px 32px 0 #222a6844, 0 2px 24px 0 #ffd70055;
-  text-shadow: 0 4px 18px #222a68cc, 0 1px 0 #fff, 0 0 2px #ffd700;
-  transform-style: preserve-3d;
-  transition: transform 0.5s ease;
-  letter-spacing: 1.5px;
-  margin-bottom: 0.7em;
-  opacity: 0.8;
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.05);
+  box-shadow: 0 4px 24px rgba(34,42,104,0.12);
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
-.hero-overlay p {
-  color: #ffd700;
-  font-size: 1.25rem;
-  margin-top: 0;
-  margin-bottom: 0.5em;
-  animation: fadeInUp 2.5s ease-in-out;
-  font-weight: 500;
-  text-shadow: 0 2px 8px #222a6855;
-}
-
-.name {
-  color: #fffffe;
-  background: linear-gradient(90deg, #2195f37e 10%, #23243a71 90%);
-  border-radius: 12px;
-  padding: 0.2em 1.1em;
-  display: inline-block;
-  font-size: 2rem;
-  font-weight: bold;
-  white-space: nowrap;
-  box-shadow: 0 4px 18px #222a68cc, 0 1px 0 #fff, 0 0 2px #ffd700;
-  margin-top: 0.5em;
-  overflow: hidden;
-  width: 0;
-  border-right: 2px solid #ffd700;
-  animation: typing-appear-disappear 4s steps(15, end) infinite;
-}
-
-
-@keyframes bounceIn {
-  0% {
-    opacity: 0;
-    transform: scale(0.3) translateY(100px);
-  }
-  60% {
-    opacity: 1;
-    transform: scale(1.05) translateY(-10px);
-  }
-  80% {
-    transform: scale(0.95) translateY(5px);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1) translateY(0);
-  }
-}
-
-@keyframes starFlash {
-  0% { filter: brightness(1) drop-shadow(0 0 0 #ffd700); }
-  60% { filter: brightness(2) drop-shadow(0 0 12px #ffd700); }
-  100% { filter: brightness(1) drop-shadow(0 0 0 #ffd700); }
-}
-
-/* الكتابة + المسح في نفس الأنيميشن */
-@keyframes typing-appear-disappear {
-  0% { width: 0; border-right: 2px solid #ffd700; }
-  5% { width: 1ch; border-right: 2px solid #ffd700; }
-  10% { width: 2ch; border-right: 2px solid #ffd700; }
-  15% { width: 3ch; border-right: 2px solid #ffd700; }
-  20% { width: 4ch; border-right: 2px solid #ffd700; }
-  25% { width: 5ch; border-right: 2px solid #ffd700; }
-  30% { width: 6ch; border-right: 2px solid #ffd700; }
-  35% { width: 7ch; border-right: 2px solid #ffd700; }
-  40% { width: 8ch; border-right: 2px solid #ffd700; }
-  45% { width: 9ch; border-right: 2px solid #ffd700; }
-  50% { width: 10ch; border-right: 2px solid #ffd700; }
-  55% { width: 11ch; border-right: 2px solid #ffd700; }
-  60% { width: 12ch; border-right: 2px solid #ffd700; }
-  65% { width: 13ch; border-right: 2px solid #ffd700; }
-  70% { width: 14ch; border-right: 2px solid #ffd700; }
-  75% { width: 15ch; border-right: 2px solid #ffd700; }
-  80% { width: 15ch; border-right: 2px solid #ffd700; }
-  90% { width: 0; border-right: none; }
-  100% { width: 0; border-right: none; }
-}
-
-@keyframes fadeInUp {
+@keyframes logo-spin {
   from {
-    opacity: 0;
-    transform: translateY(30px);
+    transform: rotate(0deg);
   }
   to {
-    opacity: 1;
-    transform: translateY(0);
+    transform: rotate(360deg);
   }
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
   }
-  to{
-    opacity: 1  ;
-  }
+}
+
+.card {
+  padding: 2em;
+  background: rgba(255,255,255,0.04);
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(34,42,104,0.08);
+  margin: 1.5em 0;
+}
+
+.read-the-docs {
+  color: #ffd700;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+
+a {
+  color: #ffd700;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+a:hover {
+  color: #fff;
+  text-shadow: 0 2px 8px #ffd70099;
+}
+
+
+button, .btn {
+  background: linear-gradient(90deg, #ffd700 0%, #ffb300 100%);
+  color: #23243a;
+  border: none;
+  border-radius: 8px;
+  padding: 0.7em 2em;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 8px #ffd70033;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+button:hover, .btn:hover {
+  background: linear-gradient(90deg, #ffb300 0%, #ffd700 100%);
+  color: #23243a;
+  transform: scale(1.05);
+}
+
+/* تحسين الترويسات */
+h1, h2, h3, h4, h5, h6 {
+  color: #ffd700;
+  font-family: inherit;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* تحسين النصوص */
+p {
+  color: #f5f5f5;
+  line-height: 1.7;
+  font-size: 1.1rem;
+}
+
+
+.contact-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
 }
