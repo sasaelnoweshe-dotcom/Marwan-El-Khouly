@@ -38,11 +38,11 @@ const Works = () => {
 
   return (
     <> 
-      <div id="works" className="container my-5 bg-white p-5 rounded-4 shadow-lg">
+      <div id="works" className="container my-5 bg-white p2-2 py-5 rounded-4 shadow-lg">
         <h1 className="mb-4 text-center text-dark fw-bold ">أعمالي</h1>
         <div className="row g-4 justify-content-center">
           {worksImages.slice(0, visibleCount).map((img, idx) => (
-            <div className="col-12 col-sm-6 col-md-4" key={idx}>
+            <div className="col-sm-6 col-md-5 col-lg-4" key={idx}>
               <div className="card shadow-lg border-0 h-100 position-relative work-card">
                 <img
                   src={img.src}
@@ -85,7 +85,7 @@ const Works = () => {
           </div>
         )}
         <br />
-        <p className="text-dark">لمزيد من الاعمال زوروا <a href="www.facebook.com/profile.php?id=61571662892951">كتابات مروان الخولي </a></p>
+        <p className="text-dark">لمزيد من الاعمال زوروا <a href="https://web.facebook.com/profile.php?id=61571662892951&_rdc=1&_rdr" id='more'>كتابات مروان الخولي </a></p>
       </div>
     </>
   );
