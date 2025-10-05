@@ -10,7 +10,7 @@ import Footer from './components/Footer'
 
 
 function App() {
-  const links = [{"title":"الرئيسية","href":"main"},
+  const links = [{"title":"الرئيسية","href":"#main"},
     {"title":"من انا","href":"#me"},
     {"title":"اعمالي","href":"#works"},
     {"title":"المطورين","href":"#devs"},
