@@ -4,7 +4,7 @@ import videoSrc from '../assets/wha.mp4' // تأكد من مسار الفيدي�
 
 const Hero = () => {
   return (
-    <section className="hero">
+    <section className="hero" id="main">
       {/* الفيديو الخلفية */}
       <video autoPlay loop muted playsInline className="hero-video">
         <source src={videoSrc} type="video/mp4" />
